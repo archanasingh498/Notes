@@ -1,5 +1,5 @@
 //ubuntu version check on docker container  
- cat /etc/lsb-release
+ cat /etc/lsb-release  
 docker run -d -p 80:80 docker/getting-started  #first time starts docker, -d detached mode, -p gives port number  
 docker run hello-world  #hello-world image container is created and started with run command  
 docker run -it ubuntu:20.04 #create, run a ubuntu container and loggin into the terminal  
