@@ -56,4 +56,16 @@ mysql -u root -p
 
     exit;  #exits from the sql terminal
     
- 
+docker volume create mysqldata   #create a volume called mysqldata   
+
+docker volume ls   #check volumes running  
+
+docker run --name sqlarchana2 --mount source=mysqldata,target=/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d 2933adc350f3    #map the mysqldata volume to directory /var/lib/mysql, which is where the database files are kept.
+
+docker exec -ti 9edcf63f266f bash   #start an interactive terminal for the specific container  
+
+docker stop 9edcf63f266f   #stop the container  
+
+docker rm 9edcf63f266f  #remove the container  
+
+docker volume inspect --format "{{json .Mountpoint}}" mysqldata   #see where the data is being stored
