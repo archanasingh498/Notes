@@ -64,7 +64,7 @@ docker run --name sqlarchana2 --mount source=mysqldata,target=/var/lib/mysql -e 
 
 docker exec -ti 9edcf63f266f bash   #start an interactive terminal for the specific container  
 
-docker stop 9edcf63f266f   #stop the container  
+docker stop 9edcf63f266f   #stop the container   
 
 docker rm 9edcf63f266f  #remove the container  
 
