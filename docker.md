@@ -5,38 +5,32 @@
  
 * docker run hello-world  **#hello-world image container is created and started with run command**     
  
-* docker run -it ubuntu:20.04 #create, run a ubuntu container and loggin into the terminal  
+* docker run -it ubuntu:20.04 **#create, run a ubuntu container and loggin into the terminal**  
   
-docker ps # only running containers   
+* docker ps **#only running containers**
+
+* docker ps -a  **#present and past containers, all containers**    
+
+* docker start 4aaa5b87e65f  **#starts a stopped container based on container id**   
  
-docker ps -a  # present and past containers, all containers  
+* docker exec -ti 4aaa5b87e65f bash  **#connect running container on a terminal, -t running container on terminal**  
  
-docker start 4aaa5b87e65f  # starts a stopped container based on container id  
+* doskey /History  **#check history in windows command** 
+
+**//mysql container creation**   
+
+* docker pull mysql  **#pull mysql image and download**
  
-docker exec -ti 4aaa5b87e65f bash  # connect running container on a terminal, -t running container on terminal  
+* docker images  **#check images**
  
-doskey /History  # check history in windows command  
-
-
-
-
-
-
-
-//mysql container creation  
-
-docker pull mysql  #pull mysql image and download
+* docker ps -a  **#check all containers**  
  
-docker images  #check images
+* docker run --name sqlarchana -e MYSQL_ROOT_PASSWORD=my-secret-pw -d 2933adc350f3  **#Start a mysql server instance**  
  
-docker ps -a  #check all containers
- 
-docker run --name sqlarchana -e MYSQL_ROOT_PASSWORD=my-secret-pw -d 2933adc350f3  #Start a mysql server instance
- 
-docker exec -ti f163a698e237 bash  #start an interactive terminal for the specific container
+* docker exec -ti f163a698e237 bash  **#start an interactive terminal for the specific container**
 
 
-//connect to the database  
+**//connect to the database**    
 
 mysql -u root -p  
 
